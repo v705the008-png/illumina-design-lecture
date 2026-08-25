@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,6 +134,9 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .dots{background-image:radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.4px);background-size:22px 22px}
 .ghost-num{position:absolute;right:-6px;bottom:-42px;font-family:var(--en);font-weight:800;font-size:230px;line-height:.8;color:var(--mint);letter-spacing:-.04em;z-index:1}
 .section-center{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+/* 常時アニメ：巨大数字のゆっくりドリフト（上品な"生きている感"） */
+@keyframes driftY{from{transform:translateY(7px)}to{transform:translateY(-11px)}}
+.ghost-num,.bignum{animation:driftY 5.5s ease-in-out infinite alternate}
 
 /* ---------- layout helpers ---------- */
 .top{display:flex;flex-direction:column;gap:12px}
@@ -296,15 +299,10 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .scan{position:absolute;left:8px;right:8px;top:8px;height:46px;border-radius:10px;background:linear-gradient(180deg,rgba(59,59,245,.30),transparent);pointer-events:none;animation:scanmove 3.2s ease-in-out infinite}
 @keyframes scanmove{0%,100%{transform:translateY(0)}50%{transform:translateY(280px)}}
 
-/* reduced motion: never disappear */
-@media (prefers-reduced-motion: reduce){
-  [data-anim],.step,.fx-pop{opacity:1 !important;transform:none !important}
-  .draw path,.draw line,.draw polyline{stroke-dashoffset:0 !important;animation:none !important}
-  .slide{transition:opacity .2s ease !important}
-  .slide.in [data-anim]{transition:opacity .25s ease !important}
-  .fshape,.pop-dot,.scan{animation:none !important}
-  .scan{display:none}
-}
+/* このプレゼンは意図的に常時アニメーションを再生する（OSの「視差効果を減らす」でも動かす）。
+   セーフティ: JSが動かない環境では要素が消えないよう静的に可視化（OS設定に非依存）。 */
+html.no-js [data-anim],html.no-js .step,html.no-js .fx-pop{opacity:1 !important;transform:none !important}
+html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-dashoffset:0 !important}
 </style>
 </head>
 <body>
@@ -314,6 +312,12 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
   <!-- 1 表紙 -->
   <section class="slide dark" data-sec="Opening" style="justify-content:space-between">
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
+    <div class="float-field">
+      <span class="fshape" style="width:130px;height:130px;background:var(--mint);right:16%;top:32%;--fd:11s;opacity:.16"></span>
+      <span class="fshape" style="width:64px;height:64px;background:var(--coral);right:31%;top:58%;--fd:8.5s;--fdl:.6s;opacity:.22"></span>
+      <span class="fshape ring" style="width:96px;height:96px;color:#fff;right:23%;top:16%;--fd:12s;opacity:.16"></span>
+      <span class="fshape" style="width:26px;height:26px;background:#fff;right:12%;top:64%;--fd:7s;--fdl:.3s;opacity:.3"></span>
+    </div>
     <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start">
       <div class="en-huge" style="font-size:118px;color:var(--ink)" data-anim="1">Design<br>Lecture</div>
       <div class="serif-label" style="font-size:22px;color:var(--ink);writing-mode:vertical-rl" data-anim="2">For Future Designers</div>
@@ -332,6 +336,11 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter I</div>
       <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">About</div>
       <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">自己紹介 ─ 経歴と、大事にしていること</div>
+    </div>
+    <div class="float-field">
+      <span class="fshape" style="width:110px;height:110px;background:var(--mint);left:52%;top:24%;--fd:11s;opacity:.14"></span>
+      <span class="fshape ring" style="width:84px;height:84px;color:#fff;left:70%;top:50%;--fd:9.5s;--fdl:.5s;opacity:.16"></span>
+      <span class="fshape" style="width:26px;height:26px;background:var(--coral);left:60%;top:66%;--fd:7.5s;opacity:.28"></span>
     </div>
     <div class="ghost-num">01</div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Chapter I</span></div>
@@ -437,6 +446,11 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter II</div>
       <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Lecture</div>
       <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「なぜ良い」へ</div>
+    </div>
+    <div class="float-field">
+      <span class="fshape" style="width:120px;height:120px;background:var(--coral);left:50%;top:22%;--fd:12s;opacity:.14"></span>
+      <span class="fshape ring" style="width:78px;height:78px;color:#fff;left:68%;top:52%;--fd:9s;--fdl:.4s;opacity:.16"></span>
+      <span class="fshape" style="width:24px;height:24px;background:var(--mint);left:58%;top:66%;--fd:7s;opacity:.3"></span>
     </div>
     <div class="ghost-num">02</div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Chapter II</span></div>
@@ -608,6 +622,11 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter III</div>
       <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Workshop</div>
       <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">つくってみる ─ ラフから、キャラクターを起こす</div>
+    </div>
+    <div class="float-field">
+      <span class="fshape" style="width:114px;height:114px;background:var(--mint);left:52%;top:24%;--fd:11.5s;opacity:.14"></span>
+      <span class="fshape ring" style="width:82px;height:82px;color:#fff;left:69%;top:50%;--fd:9.5s;--fdl:.5s;opacity:.16"></span>
+      <span class="fshape" style="width:26px;height:26px;background:var(--coral);left:60%;top:66%;--fd:7.5s;opacity:.28"></span>
     </div>
     <div class="ghost-num">03</div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Chapter III</span></div>
@@ -852,7 +871,8 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
   var slides=[].slice.call(deck.querySelectorAll('.slide'));
   var stage=document.getElementById('stage');
   var bar=document.getElementById('bar'), countEl=document.getElementById('count');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.remove('no-js');  // JS稼働：アニメーションを有効化（OS設定に非依存）
+  var reduce=false;   // このプレゼンは常時アニメーションを再生する
   var ci=0, shown=0;
 
   function fit(){ stage.style.setProperty('--s', Math.min(innerWidth/1280, innerHeight/720)); }
