@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
 
 :root{
-  --blue:#4b3ff5; --blue-600:#2a29e0;
+  --blue:#454e9e; --blue-600:#353c7a;   /* 落ち着いた（くすんだ）インディゴ */
   --ink:#111219; --ink-70:#43465a; --ink-45:#8a8d9c;
   --paper:#ffffff;
   --card:#ffffff;
@@ -130,9 +130,9 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .hint{position:fixed;left:50%;transform:translateX(-50%);bottom:8px;z-index:50;color:#6a6b80;font-family:var(--en);font-size:11px;letter-spacing:.05em}
 
 /* ---------- dark / section (=フルブリードのブルーパネル) ---------- */
-.slide.dark{background:var(--blue);color:var(--ink)}
+.slide.dark{background:var(--blue);color:#fff}
 .slide.dark .body{color:rgba(17,18,25,.74)}
-.slide.dark .eyebrow{color:var(--ink)}
+.slide.dark .eyebrow{color:#fff}
 .dots{background-image:radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.4px);background-size:22px 22px}
 .ghost-num{position:absolute;right:-6px;bottom:-42px;font-family:var(--en);font-weight:800;font-size:230px;line-height:.8;color:var(--mint);letter-spacing:-.04em;z-index:1}
 .section-center{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
@@ -187,6 +187,15 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .credit{font-size:11px;color:var(--ink-45);letter-spacing:.02em;line-height:1.5}
 /* 出典クレジット（第三者の作品を分析用に掲載） */
 .source{position:absolute;right:80px;bottom:52px;max-width:52%;text-align:right;font-size:10.5px;color:var(--ink-45);letter-spacing:.01em;line-height:1.45;z-index:3}
+/* アート vs デザイン（2画像比較） */
+.artvs{display:grid;grid-template-columns:1fr auto 1fr;gap:0;flex:1;align-items:center;margin-top:10px}
+.avcol{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 30px}
+.avimg{width:100%;max-width:360px;height:340px;overflow:hidden;border-radius:var(--r-md);box-shadow:var(--sh-2)}
+.avimg img{width:100%;height:100%;object-fit:cover;display:block}
+.avlab{font-family:var(--en);font-weight:800;font-size:26px;margin-top:16px;letter-spacing:.02em}
+.avlab span{font-family:var(--jp);font-size:14px;color:var(--ink-45);font-weight:500;margin-left:8px}
+.avdesc{font-size:14px;color:var(--ink-70);line-height:1.7;margin-top:8px;max-width:340px}
+.avmid{font-family:var(--en);font-weight:700;color:var(--ink-45);font-size:26px;padding:0 8px}
 .metarow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .mchip{font-size:14px;color:var(--ink-70);background:var(--card);border:1px solid var(--line);border-radius:0;padding:8px 16px;box-shadow:var(--sh-1)}
 .mchip b{color:var(--blue);font-family:var(--en);font-size:11px;letter-spacing:.05em;margin-right:8px;text-transform:uppercase}
@@ -330,12 +339,12 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       <span class="fshape" style="width:26px;height:26px;background:#fff;right:12%;top:64%;--fd:7s;--fdl:.3s;opacity:.3"></span>
     </div>
     <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start">
-      <div class="en-huge" style="font-size:118px;color:var(--ink)" data-anim="1">Design<br>Lecture</div>
-      <div class="serif-label" style="font-size:22px;color:var(--ink);writing-mode:vertical-rl" data-anim="2">For Future Designers</div>
+      <div class="en-huge" style="font-size:118px;color:#fff" data-anim="1">Design<br>Lecture</div>
+      <div class="serif-label" style="font-size:22px;color:rgba(255,255,255,.88);writing-mode:vertical-rl" data-anim="2">For Future Designers</div>
     </div>
     <div style="position:relative;z-index:2;max-width:840px" data-anim="3">
-      <div class="display" style="color:var(--ink);font-size:52px">デザインは、誰でも<span class="k1">話せる</span>。</div>
-      <p style="margin-top:16px;font-weight:700;color:var(--ink);font-size:16.5px;line-height:1.75">株式会社イルミナ 就労移行支援　│　Ued.Yusuke Design Studio ・ 上田ゆうすけ<br>60分で、デザインの“見方”と“つくり方”を。</p>
+      <div class="display" style="color:#fff;font-size:52px">デザインは、誰でも<span class="k1">話せる</span>。</div>
+      <p style="margin-top:16px;font-weight:700;color:rgba(255,255,255,.9);font-size:16.5px;line-height:1.75">株式会社イルミナ 就労移行支援　│　Ued.Yusuke Design Studio ・ 上田ゆうすけ<br>60分で、デザインの“見方”と“つくり方”を。</p>
     </div>
     <div class="bignum">01</div>
   </section>
@@ -345,8 +354,8 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter I</div>
-      <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">About</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">自己紹介 ─ 経歴と、大事にしていること</div>
+      <div class="en-huge" style="font-size:110px;color:#fff;margin-top:2px" data-anim="2">About</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:rgba(255,255,255,.92);font-family:var(--jp);letter-spacing:.02em" data-anim="3">自己紹介 ─ 経歴と、大事にしていること</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:110px;height:110px;background:var(--mint);left:52%;top:24%;--fd:11s;opacity:.14"></span>
@@ -357,17 +366,20 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Chapter I</span></div>
   </section>
 
-  <!-- 3 経歴（動画メイン＋簡単な略歴） -->
+  <!-- 3 経歴（動画＋略歴） -->
   <section class="slide" data-sec="About">
     <p class="eyebrow" data-anim="1">About Me ・ 上田ゆうすけ</p>
-    <div data-anim="2" style="flex:1;display:flex;align-items:center;justify-content:center;margin-top:10px;min-height:0">
-      <video src="assets/intro.mp4" autoplay loop muted playsinline
-        style="height:100%;width:auto;max-width:100%;object-fit:contain;border-radius:var(--r-lg);box-shadow:var(--sh-2);display:block;background:#0e1020"></video>
-    </div>
-    <div data-anim="3" style="display:flex;gap:26px;align-items:baseline;flex-wrap:wrap;margin-top:16px">
-      <div style="font-size:21px;font-weight:700;white-space:nowrap">上田 ゆうすけ <span style="font-size:12px;color:var(--ink-45);font-weight:500;font-family:var(--en)">Yusuke Ueda ・ Nagoya</span></div>
-      <div style="font-size:14px;color:var(--ink-70);line-height:1.6">飲食で店長を10年（店内POP・商品開発を独学）→ <span class="k2">2023年 独立</span></div>
-      <div style="font-size:14px;color:var(--ink-70)">ロゴ・キャラクター・ブランディング</div>
+    <div class="split" style="grid-template-columns:1fr 1.08fr;gap:40px;align-items:center;margin-top:6px">
+      <div class="tl" data-anim="2">
+        <div class="row"><div class="yr">2013</div><div><div class="t" style="font-size:16px">名古屋学芸大学 卒業</div><div class="d">子どもケア学科（保育士・幼稚園教諭）。「人を見る目」の原点。</div></div></div>
+        <div class="row"><div class="yr">2013–23</div><div><div class="t" style="font-size:16px">飲食チェーンで店長を10年</div><div class="d">店内POP・商品開発を独学で自作。これがデザインの入口。</div></div></div>
+        <div class="row"><div class="yr">2022</div><div><div class="t" style="font-size:16px">補助金 × 瀬戸焼の職人</div><div class="d">オリジナル商品を開発・販売。地域メディアにも掲載。</div></div></div>
+        <div class="row hl"><div class="yr">2023–</div><div><div class="t" style="font-size:16px">独立 ─ デザインスタジオ開業</div><div class="d">名古屋・天白区。ロゴ／キャラ／ブランディング。</div></div></div>
+      </div>
+      <div data-anim="3" style="display:flex;justify-content:center">
+        <video src="assets/intro.mp4" autoplay loop muted playsinline
+          style="width:100%;max-width:500px;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--sh-2);display:block;background:#0e1020"></video>
+      </div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>01 — About Me</span></div>
   </section>
@@ -402,22 +414,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>ued-yusuke.com</span></div>
   </section>
 
-  <!-- 6 理念 -->
-  <section class="slide stmt" data-sec="About">
-    <div class="section-center">
-      <p class="eyebrow" data-anim="1">Visualize the Quirks ・ 理念</p>
-      <div class="display" style="margin-top:14px" data-anim="2">クセを、かたちにする。</div>
-      <p class="body" style="margin-top:16px;max-width:620px" data-anim="3">その人・その会社にしかない個性（クセ）を抽出して、見える形にする。</p>
-      <div class="creeds" style="margin-top:26px">
-        <div class="creed" data-anim="4"><span class="n">01</span><b>伝わるより、<span class="k1">刺さる</span>。</b></div>
-        <div class="creed" data-anim="5"><span class="n">02</span><b>整えるより、残す。</b></div>
-        <div class="creed" data-anim="6"><span class="n">03</span><b>正解より、らしさ。</b></div>
-      </div>
-    </div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>01 — About Me</span></div>
-  </section>
-
-  <!-- 7 feature 株式会社フォトラクション -->
+  <!-- 6 feature 株式会社フォトラクション -->
   <section class="slide" data-sec="Work">
     <div class="worklayout">
       <div class="wmeta">
@@ -430,6 +427,21 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       <div class="mockshot spring" data-anim="3"><img src="assets/work-photoruction.png" alt="株式会社フォトラクション イベントノベルティデザイン"></div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>ued-yusuke.com</span></div>
+  </section>
+
+  <!-- 7 理念 -->
+  <section class="slide stmt" data-sec="About">
+    <div class="section-center">
+      <p class="eyebrow" data-anim="1">Visualize the Quirks ・ 理念</p>
+      <div class="display" style="margin-top:14px" data-anim="2">クセを、かたちにする。</div>
+      <p class="body" style="margin-top:16px;max-width:620px" data-anim="3">その人・その会社にしかない個性（クセ）を抽出して、見える形にする。</p>
+      <div class="creeds" style="margin-top:26px">
+        <div class="creed" data-anim="4"><span class="n">01</span><b>伝わるより、<span class="k1">刺さる</span>。</b></div>
+        <div class="creed" data-anim="5"><span class="n">02</span><b>整えるより、残す。</b></div>
+        <div class="creed" data-anim="6"><span class="n">03</span><b>正解より、らしさ。</b></div>
+      </div>
+    </div>
+    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>01 — About Me</span></div>
   </section>
 
   <!-- 8 アジェンダ -->
@@ -449,8 +461,8 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter II</div>
-      <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Lecture</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「なぜ良い」へ</div>
+      <div class="en-huge" style="font-size:110px;color:#fff;margin-top:2px" data-anim="2">Lecture</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:rgba(255,255,255,.92);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「なぜ良い」へ</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:120px;height:120px;background:var(--coral);left:50%;top:22%;--fd:12s;opacity:.14"></span>
@@ -465,12 +477,20 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
   <section class="slide" data-sec="Lecture">
     <div class="top"><p class="eyebrow" data-anim="1">It's Not About You</p>
     <h1 class="h1" data-anim="2">デザインの主語は、<span class="k3">相手</span>。</h1></div>
-    <div class="vs" style="margin-top:10px">
-      <div class="c art viz" data-anim="2"><div><div class="vlab">ART</div><div class="vt">主語は「自分」。<br>自分の内側を表現する。正解はなく、解釈は受け手にひらかれている。</div></div><div style="font-family:var(--en);opacity:.6">自己表現</div></div>
-      <div class="mid" data-anim="3">≠</div>
-      <div class="c des viz" data-anim="3"><div><div class="vlab" style="color:var(--blue)">DESIGN</div><div class="vt" style="color:var(--ink-70)">主語は「相手」。<br>伝えたいこと（<span class="k2">意図</span>）と<span class="k2">情報</span>を、相手のために並べ替える。</div></div><div style="font-family:var(--en);color:var(--blue);font-weight:600">目的 → 手段</div></div>
+    <div class="artvs">
+      <div class="avcol" data-anim="2">
+        <div class="avimg"><img src="assets/art-gogh.jpg" alt="ゴッホ『ひまわり』（アート）"></div>
+        <div class="avlab">ART <span>アート</span></div>
+        <p class="avdesc">主語は「<b>自分</b>」。内側を表現する。正解はなく、解釈は受け手にひらかれる。</p>
+      </div>
+      <div class="avmid" data-anim="3">≠</div>
+      <div class="avcol" data-anim="3">
+        <div class="avimg"><img src="assets/art-exit8.jpg" alt="映画『8番出口』ポスター（デザイン）"></div>
+        <div class="avlab" style="color:var(--blue)">DESIGN <span>デザイン</span></div>
+        <p class="avdesc">主語は「<b>相手</b>」。<span class="k2">意図</span>と<span class="k2">情報</span>を、相手のために並べ替える。目的がある。</p>
+      </div>
     </div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>02 — Lecture</span></div>
+    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：V.ゴッホ『ひまわり』(PD) ／ 映画『8番出口』©2025「8番出口」製作委員会</span></div>
   </section>
 
   <!-- 11 意図と情報 -->
@@ -641,8 +661,8 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter III</div>
-      <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Workshop</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">つくってみる ─ ラフから、キャラクターを起こす</div>
+      <div class="en-huge" style="font-size:110px;color:#fff;margin-top:2px" data-anim="2">Workshop</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:rgba(255,255,255,.92);font-family:var(--jp);letter-spacing:.02em" data-anim="3">つくってみる ─ ラフから、キャラクターを起こす</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:114px;height:114px;background:var(--mint);left:52%;top:24%;--fd:11.5s;opacity:.14"></span>
