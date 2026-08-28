@@ -120,7 +120,7 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .foot{position:absolute;left:80px;right:80px;bottom:26px;display:flex;justify-content:space-between;align-items:center;font-family:var(--en);font-size:12px;letter-spacing:.06em;color:var(--ink-45)}
 .foot .brand{font-weight:600;color:var(--ink-70)}
 .slide.dark .foot{color:rgba(17,18,25,.55)} .slide.dark .foot .brand{color:rgba(17,18,25,.8)}
-.slide.stmt .foot{color:rgba(255,255,255,.55)} .slide.stmt .foot .brand{color:rgba(255,255,255,.85)}
+.slide.stmt .foot{color:var(--ink-45)} .slide.stmt .foot .brand{color:var(--ink-70)}
 #bar{position:fixed;left:0;top:0;height:3px;background:var(--mint);width:0;z-index:60;transition:width .4s var(--e-out)}
 #hud{position:fixed;right:18px;top:12px;z-index:50;font-family:var(--en);color:#7a7b90;font-size:12px;letter-spacing:.08em;display:flex;align-items:center;gap:12px}
 #hud .ctl{pointer-events:auto;display:flex;gap:6px}
@@ -130,9 +130,9 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .hint{position:fixed;left:50%;transform:translateX(-50%);bottom:8px;z-index:50;color:#6a6b80;font-family:var(--en);font-size:11px;letter-spacing:.05em}
 
 /* ---------- dark / section (=フルブリードのブルーパネル) ---------- */
-.slide.dark{background:var(--blue);color:#fff}
+.slide.dark{background:var(--blue);color:var(--ink)}
 .slide.dark .body{color:rgba(17,18,25,.74)}
-.slide.dark .eyebrow{color:#fff}
+.slide.dark .eyebrow{color:var(--ink)}
 .dots{background-image:radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.4px);background-size:22px 22px}
 .ghost-num{position:absolute;right:-6px;bottom:-42px;font-family:var(--en);font-weight:800;font-size:230px;line-height:.8;color:var(--mint);letter-spacing:-.04em;z-index:1}
 .section-center{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
@@ -190,8 +190,8 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 /* アート vs デザイン（2画像比較） */
 .artvs{display:grid;grid-template-columns:1fr auto 1fr;gap:0;flex:1;align-items:center;margin-top:10px}
 .avcol{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 30px}
-.avimg{width:100%;max-width:360px;height:340px;overflow:hidden;border-radius:var(--r-md);box-shadow:var(--sh-2)}
-.avimg img{width:100%;height:100%;object-fit:cover;display:block}
+.avimg{width:100%;height:360px;display:flex;align-items:center;justify-content:center}
+.avimg img{max-width:100%;max-height:360px;object-fit:contain;display:block;box-shadow:var(--sh-2);border-radius:6px}
 .avlab{font-family:var(--en);font-weight:800;font-size:26px;margin-top:16px;letter-spacing:.02em}
 .avlab span{font-family:var(--jp);font-size:14px;color:var(--ink-45);font-weight:500;margin-left:8px}
 .avdesc{font-size:14px;color:var(--ink-70);line-height:1.7;margin-top:8px;max-width:340px}
@@ -286,10 +286,10 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .bstep.shown{border-color:var(--line-blue);background:var(--tint)}
 
 /* closing / statement dark */
-.slide.stmt{background:var(--blue);color:#fff;justify-content:center}
-.slide.stmt .body{color:rgba(255,255,255,.82)}
-.slide.stmt .eyebrow{color:#fff}
-.slide.stmt .contact .lb{color:rgba(255,255,255,.6)} .slide.stmt .contact .cv{color:#fff}
+.slide.stmt{background:var(--blue);color:var(--ink);justify-content:center}
+.slide.stmt .body{color:var(--ink-70)}
+.slide.stmt .eyebrow{color:var(--ink)}
+.slide.stmt .contact .lb{color:var(--ink-45)} .slide.stmt .contact .cv{color:var(--ink)}
 .contact{display:flex;gap:44px;margin-top:30px}
 .contact .lb{font-family:var(--en);font-size:11px;letter-spacing:.12em;color:var(--ink-45);text-transform:uppercase}
 .contact .cv{font-family:var(--en);font-size:21px;font-weight:600;margin-top:4px;color:var(--ink)}
@@ -339,12 +339,12 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       <span class="fshape" style="width:26px;height:26px;background:#fff;right:12%;top:64%;--fd:7s;--fdl:.3s;opacity:.3"></span>
     </div>
     <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start">
-      <div class="en-huge" style="font-size:118px;color:#fff" data-anim="1">Design<br>Lecture</div>
-      <div class="serif-label" style="font-size:22px;color:rgba(255,255,255,.88);writing-mode:vertical-rl" data-anim="2">For Future Designers</div>
+      <div class="en-huge" style="font-size:118px;color:var(--ink)" data-anim="1">Design<br>Lecture</div>
+      <div class="serif-label" style="font-size:22px;color:var(--ink);writing-mode:vertical-rl" data-anim="2">For Future Designers</div>
     </div>
     <div style="position:relative;z-index:2;max-width:840px" data-anim="3">
-      <div class="display" style="color:#fff;font-size:52px">デザインは、誰でも<span class="k1">話せる</span>。</div>
-      <p style="margin-top:16px;font-weight:700;color:rgba(255,255,255,.9);font-size:16.5px;line-height:1.75">株式会社イルミナ 就労移行支援　│　Ued.Yusuke Design Studio ・ 上田ゆうすけ<br>60分で、デザインの“見方”と“つくり方”を。</p>
+      <div class="display" style="color:var(--ink);font-size:52px">デザインは、誰でも<span class="k1">話せる</span>。</div>
+      <p style="margin-top:16px;font-weight:700;color:var(--ink);font-size:16.5px;line-height:1.75">株式会社イルミナ 就労移行支援　│　Ued.Yusuke Design Studio ・ 上田ゆうすけ<br>60分で、デザインの“見方”と“つくり方”を。</p>
     </div>
     <div class="bignum">01</div>
   </section>
@@ -354,8 +354,8 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter I</div>
-      <div class="en-huge" style="font-size:110px;color:#fff;margin-top:2px" data-anim="2">About</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:rgba(255,255,255,.92);font-family:var(--jp);letter-spacing:.02em" data-anim="3">自己紹介 ─ 経歴と、大事にしていること</div>
+      <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">About</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">自己紹介 ─ 経歴と、大事にしていること</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:110px;height:110px;background:var(--mint);left:52%;top:24%;--fd:11s;opacity:.14"></span>
@@ -373,8 +373,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       <div class="tl" data-anim="2">
         <div class="row"><div class="yr">2013</div><div><div class="t" style="font-size:16px">名古屋学芸大学 卒業</div><div class="d">子どもケア学科（保育士・幼稚園教諭）。「人を見る目」の原点。</div></div></div>
         <div class="row"><div class="yr">2013–23</div><div><div class="t" style="font-size:16px">飲食チェーンで店長を10年</div><div class="d">店内POP・商品開発を独学で自作。これがデザインの入口。</div></div></div>
-        <div class="row"><div class="yr">2022</div><div><div class="t" style="font-size:16px">補助金 × 瀬戸焼の職人</div><div class="d">オリジナル商品を開発・販売。地域メディアにも掲載。</div></div></div>
-        <div class="row hl"><div class="yr">2023–</div><div><div class="t" style="font-size:16px">独立 ─ デザインスタジオ開業</div><div class="d">名古屋・天白区。ロゴ／キャラ／ブランディング。</div></div></div>
+        <div class="row hl"><div class="yr">2023–</div><div><div class="t" style="font-size:16px">独立 ─ デザインスタジオ開業</div><div class="d">ロゴ・キャラクター・ブランディングを手がける。</div></div></div>
       </div>
       <div data-anim="3" style="display:flex;justify-content:center">
         <video src="assets/intro.mp4" autoplay loop muted playsinline
@@ -449,9 +448,9 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="top"><p class="eyebrow" data-anim="1">What You'll Walk Away With</p>
     <h1 class="h1" data-anim="2">今日、持って帰ってほしいこと。</h1></div>
     <div class="cards3" style="margin-top:8px">
-      <div class="card-b spring" data-anim="3"><div class="min">10 min</div><div class="ico sky" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M12 5c-5 0-8.5 4.5-9.5 7 1 2.5 4.5 7 9.5 7s8.5-4.5 9.5-7c-1-2.5-4.5-7-9.5-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>デザインの正体</h3><p>特別な人だけのものじゃない、と知る。</p></div>
-      <div class="card-b spring" data-anim="4"><div class="min">25 min</div><div class="ico amber" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg></div><h3>見る目を持つ</h3><p>「なぜ良いか」を自分の言葉で言える。</p></div>
-      <div class="card-b spring" data-anim="5"><div class="min">25 min</div><div class="ico coral" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V12m0-1a1.5 1.5 0 0 1 3 0v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-4.6-3L5 15c-.6-1.2.9-2.3 1.9-1.4L9 15"/></svg></div><h3>つくる手を動かす</h3><p>自分の手でキャラを1つ完成させる。</p></div>
+      <div class="card-b spring" data-anim="3"><div class="min">10 min</div><div class="ico sky" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.8 10.6c.5.5 .8 1.1 .8 1.9v.5h6v-.5c0-.8 .3-1.4 .8-1.9A6 6 0 0 0 12 3z"/></svg></div><h3>デザインの正体</h3><p>特別な人だけのものじゃない、と知る。</p></div>
+      <div class="card-b spring" data-anim="4"><div class="min">25 min</div><div class="ico amber" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg></div><h3>見る目を持つ</h3><p>「なぜ良いか」を自分の言葉で言える。</p></div>
+      <div class="card-b spring" data-anim="5"><div class="min">25 min</div><div class="ico coral" style="margin-bottom:14px"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L15.5 5.5a2.1 2.1 0 0 1 3 3L8 19l-4 1z"/><path d="M13.5 7.5l3 3"/></svg></div><h3>つくる手を動かす</h3><p>自分の手でキャラを1つ完成させる。</p></div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Let's start</span></div>
   </section>
@@ -461,8 +460,8 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter II</div>
-      <div class="en-huge" style="font-size:110px;color:#fff;margin-top:2px" data-anim="2">Lecture</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:rgba(255,255,255,.92);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「なぜ良い」へ</div>
+      <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Lecture</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「なぜ良い」へ</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:120px;height:120px;background:var(--coral);left:50%;top:22%;--fd:12s;opacity:.14"></span>
@@ -504,19 +503,19 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       <div class="creeds" style="gap:14px">
         <div class="card-b spring" data-anim="3" style="display:flex;gap:16px;align-items:center;padding:15px 18px">
           <div class="pico" style="background:#ffe9e3">
-            <svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="20" rx="3.5" fill="#2b2f45"/><circle cx="12" cy="7" r="2.3" fill="#ff5a5f"/><circle cx="12" cy="12" r="2.3" fill="#565a76"/><circle cx="12" cy="17" r="2.3" fill="#565a76"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><rect x="7.3" y="2.3" width="9.4" height="19.4" rx="4.7" fill="#2b2f45"/><circle cx="12" cy="7" r="2.4" fill="#ff5a5f"/><circle cx="12" cy="12" r="2.4" fill="#fff" opacity=".32"/><circle cx="12" cy="17" r="2.4" fill="#fff" opacity=".32"/></svg>
           </div>
           <div><b style="font-size:17px">信号が赤で「止まれ」</b><p style="color:var(--ink-45);font-size:13.5px;margin-top:3px">赤＝危険。色そのものに意図がある。</p></div>
         </div>
         <div class="card-b spring" data-anim="4" style="display:flex;gap:16px;align-items:center;padding:15px 18px">
           <div class="pico" style="background:#e7eeff">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="#3b3ff5"/><circle cx="12" cy="8" r="2.1" fill="#fff"/><path d="M9 12.4c0-1.5 1.35-2.6 3-2.6s3 1.1 3 2.6V17h-1.9v4h-2.2v-4H9z" fill="#fff"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.4" width="18" height="11.2" rx="2.6" fill="#3b3ff5"/><path d="M7.2 12h7.2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M12 8.4l3.6 3.6-3.6 3.6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div><b style="font-size:17px">標識のピクトグラム</b><p style="color:var(--ink-45);font-size:13.5px;margin-top:3px">文字を読ませず、形と色で瞬時に伝える。</p></div>
         </div>
         <div class="card-b spring" data-anim="5" style="display:flex;gap:16px;align-items:center;padding:15px 18px">
           <div class="pico" style="background:#e3f8ef">
-            <svg viewBox="0 0 24 24"><rect x="2.5" y="3.5" width="19" height="11" rx="1.6" fill="#cfe8dc"/><circle cx="8" cy="9" r="2.3" fill="#ffb27a"/><path d="M12.5 13l3.2-3.4L21 14.5H12.5z" fill="#7fbf9e"/><rect x="2.5" y="17" width="11" height="2.2" rx="1.1" fill="#2b2f45"/><rect x="16.5" y="17" width="5" height="2.2" rx="1.1" fill="#ff7a5c"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3.3" y="3.3" width="17.4" height="12" rx="2.2" fill="#eaf5ef" stroke="#37c98a" stroke-width="1.3"/><circle cx="8" cy="8.4" r="1.9" fill="#ffc264"/><path d="M11.3 13.3l3.1-3.5 4.6 5.5H11.3z" fill="#7fceb0"/><rect x="3.3" y="17.8" width="9.6" height="2.5" rx="1.25" fill="#2b2f45"/><rect x="15" y="17.8" width="5.7" height="2.5" rx="1.25" fill="#ff7a5c"/></svg>
           </div>
           <div><b style="font-size:17px">メニューの写真が大きい</b><p style="color:var(--ink-45);font-size:13.5px;margin-top:3px">一番の決め手だから、大きさで推す。</p></div>
         </div>
@@ -564,41 +563,21 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Case Study</span></div>
   </section>
 
-  <!-- 19 赤の意味 -->
+  <!-- 14 色の分析（赤＋青緑・クリックで出現） -->
   <section class="slide" data-sec="Case Study">
-    <div class="top"><p class="eyebrow" data-anim="1">KV Analysis 01 ・ 色</p>
-    <h1 class="h1" style="font-size:38px" data-anim="2"><span style="color:var(--red)">赤</span>は、この物語の主役。</h1></div>
+    <div class="top"><p class="eyebrow" data-anim="1">KV Analysis ・ 色</p>
+    <h1 class="h1" style="font-size:38px" data-anim="2"><span style="color:var(--red)">色</span>が、物語を語る。</h1></div>
     <div class="kv-split" style="margin-top:8px">
-      <div class="kv-frame mat viz" data-anim="2" style="height:480px"><img src="assets/kv-1ki.jpg" alt="黄泉のツガイ 1期KV 双子と彼岸花"></div>
+      <div class="kv-frame mat viz" data-anim="2" style="height:500px"><img src="assets/kv-1ki.jpg" alt="黄泉のツガイ 1期KV"></div>
       <div>
         <div class="pts">
-          <div class="pt" data-anim="3"><span class="sw" style="background:var(--red)"></span><div><b>彼岸花と、双子の目</b><p>要所にだけ置かれ、真っ先に目を引く。</p></div></div>
-          <div class="pt" data-anim="4"><span class="sw" style="background:linear-gradient(var(--red),#7a1518)"></span><div><b>赤の両義性</b><p><span class="em-r">情熱・愛</span> ⇄ <span class="em-r">血・犠牲</span></p></div></div>
-          <div class="pt" data-anim="5"><span class="sw" style="background:#c0392b"></span><div><b>東洋の赤</b><p>魔除け・生命。「赤ちゃん」＝昇る朝日＝“始まり”。</p></div></div>
+          <div class="pt step" data-step="1"><span class="sw" style="background:var(--red)"></span><div><b>彼岸花と、双子の目の赤</b><p>要所にだけ置かれ、真っ先に目を引く。</p></div></div>
+          <div class="pt step" data-step="2"><span class="sw" style="background:var(--red)"></span><div><b>赤の両義性</b><p><span class="em-r">情熱・愛</span> ⇄ <span class="em-r">血・犠牲</span></p></div></div>
+          <div class="pt step" data-step="3"><span class="sw" style="background:var(--red)"></span><div><b>東洋の赤</b><p>魔除け・生命。「赤ちゃん」＝昇る朝日＝“始まり”。</p></div></div>
+          <div class="pt step" data-step="4"><span class="sw" style="background:var(--teal)"></span><div><b>補色の青緑（背景の魔物）</b><p>赤の<span class="em-t">反対の色</span>＝魔・死・夜。並ぶと互いが際立つ。</p></div></div>
         </div>
-        <div class="storybar" data-anim="6"><span class="lead-em">POINT</span><div>だから、この物語は赤なんだ。<b>色は、ストーリーを語る。</b></div></div>
+        <div class="storybar step" data-step="5"><span class="lead-em">POINT</span><div>だから、この物語は赤なんだ。<b>色は、ストーリーを語る。</b></div></div>
       </div>
-    </div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：『黄泉のツガイ』KV ©荒川弘／SQUARE ENIX・製作委員会（教育目的の引用）</span></div>
-  </section>
-
-  <!-- 20 補色の青緑 -->
-  <section class="slide" data-sec="Case Study">
-    <div class="top"><p class="eyebrow" data-anim="1">KV Analysis 02 ・ 補色</p>
-    <h1 class="h1" style="font-size:38px" data-anim="2">背景の<span style="color:var(--teal)">青緑</span>は、赤の“反対”。</h1></div>
-    <div class="kv-split" style="margin-top:8px">
-      <div>
-        <div class="pts">
-          <div class="pt" data-anim="3"><span class="dot" style="background:var(--teal);color:#fff">補</span><div><b>背景の魔物＝青緑</b><p>赤の<span class="em-t">補色（色相環の反対）</span>。並ぶと互いが際立つ。</p></div></div>
-          <div class="pt" data-anim="4"><span class="dot" style="background:var(--teal);color:#fff">意</span><div><b>青緑＝魔・死・夜</b><p>生命・始まりの<span class="em-r">赤</span>の対極。色で対立を語る。</p></div></div>
-        </div>
-        <div class="swatches" data-anim="6">
-          <div class="s" style="background:var(--red)">RED</div>
-          <div class="s" style="background:var(--teal)">TEAL</div>
-          <div class="s" style="background:#0e1020">DARK</div>
-        </div>
-      </div>
-      <div class="kv-frame mat viz" data-anim="2" style="height:480px"><img src="assets/kv-1ki.jpg" alt="黄泉のツガイ 1期KV 背景の群れ"></div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：『黄泉のツガイ』KV ©荒川弘／SQUARE ENIX・製作委員会（教育目的の引用）</span></div>
   </section>
@@ -620,49 +599,13 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：松岡緑堂『百鬼夜行之図』／『黄泉のツガイ』©荒川弘／SQUARE ENIX（教育目的の引用）</span></div>
   </section>
 
-  <!-- 22 双子・黒黄・Z線 -->
-  <section class="slide" data-sec="Case Study">
-    <div class="top"><p class="eyebrow" data-anim="1">KV Analysis 04 ・ 視線と配色</p>
-    <h1 class="h1" style="font-size:38px" data-anim="2">双子は中央。黒と黄の、<span style="color:var(--red)">警告色</span>。</h1></div>
-    <div class="kv-split" style="margin-top:8px">
-      <div class="kv-frame mat viz" data-anim="2" style="height:480px"><img src="assets/kv-1ki.jpg" alt="黄泉のツガイ 1期KV 双子"></div>
-      <div>
-        <div class="pts">
-          <div class="pt" data-anim="3"><span class="dot" style="background:var(--blue);color:#fff">中</span><div><b>双子は中央</b><p>Z型の視線誘導で、真っ先に主役へ。</p></div></div>
-          <div class="pt" data-anim="4"><span class="sw" style="background:linear-gradient(#0e1020 50%,#f2c200 50%)"></span><div><b>黒 × 黄＝警告色</b><p>踏切・工事現場と同じ。<span class="em-r">緊張感</span>を予告。</p></div></div>
-        </div>
-        <div class="storybar" data-anim="6"><span class="lead-em">SO</span><div>色・構図・配置の全部が、物語を指している。<b>これが「意図のあるデザイン」。</b></div></div>
-      </div>
-    </div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：『黄泉のツガイ』KV ©荒川弘／SQUARE ENIX・製作委員会（教育目的の引用）</span></div>
-  </section>
-
-  <!-- 21 サンリオ -->
-  <section class="slide" data-sec="Lecture">
-    <div class="split" style="grid-template-columns:1fr 1.05fr">
-      <div class="kv-frame filled viz" data-anim="2" style="height:470px"><img src="assets/sanrio.jpg" alt="サンリオのキャラクターたち"></div>
-      <div>
-        <p class="eyebrow" data-anim="1">The Power of Subtraction</p>
-        <h1 class="h1" style="margin-top:12px;font-size:38px" data-anim="2">サンリオが、愛される理由。</h1>
-        <p class="body" style="margin-top:12px;font-size:18px" data-anim="3">ハローキティには、口がありません。<span class="k2">だからこそ</span>、誰の気持ちにも重なる。足すより、<span class="k3">引く勇気</span>。</p>
-        <div class="checks" style="margin-top:16px">
-          <div class="check spring" data-anim="4"><div class="ci">◯</div><div><b>輪郭はシンプルに</b><p>小さくても遠くても分かる。</p></div></div>
-          <div class="check spring" data-anim="4"><div class="ci">◯</div><div><b>顔は記号化</b><p>点の目・小さな口。崩れない。</p></div></div>
-          <div class="check spring" data-anim="5"><div class="ci">◯</div><div><b>色は2〜3色</b><p>遠目でも“その子”と分かる。</p></div></div>
-          <div class="check spring" data-anim="5"><div class="ci">◯</div><div><b>丸みと、設定</b><p>親しみ＋物語が、愛着を生む。</p></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：サンリオキャラクター ©2024 SANRIO CO., LTD.（教育目的の引用）</span></div>
-  </section>
-
   <!-- 扉 実践 -->
   <section class="slide dark" data-sec="Workshop">
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter III</div>
-      <div class="en-huge" style="font-size:110px;color:#fff;margin-top:2px" data-anim="2">Workshop</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:rgba(255,255,255,.92);font-family:var(--jp);letter-spacing:.02em" data-anim="3">つくってみる ─ ラフから、キャラクターを起こす</div>
+      <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Workshop</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">つくってみる ─ ラフから、キャラクターを起こす</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:114px;height:114px;background:var(--mint);left:52%;top:24%;--fd:11.5s;opacity:.14"></span>
@@ -688,6 +631,25 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       </div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>03 — Workshop</span></div>
+  </section>
+
+  <!-- サンリオ（キャラの理由づけ前） -->
+  <section class="slide" data-sec="Workshop">
+    <div class="split" style="grid-template-columns:1fr 1.05fr">
+      <div class="kv-frame filled viz" data-anim="2" style="height:470px"><img src="assets/sanrio.jpg" alt="サンリオのキャラクターたち"></div>
+      <div>
+        <p class="eyebrow" data-anim="1">The Power of Subtraction</p>
+        <h1 class="h1" style="margin-top:12px;font-size:38px" data-anim="2">サンリオが、愛される理由。</h1>
+        <p class="body" style="margin-top:12px;font-size:18px" data-anim="3">ハローキティには、口がありません。<span class="k2">だからこそ</span>、誰の気持ちにも重なる。足すより、<span class="k3">引く勇気</span>。</p>
+        <div class="checks" style="margin-top:16px">
+          <div class="check spring" data-anim="4"><div class="ci">◯</div><div><b>輪郭はシンプルに</b><p>小さくても遠くても分かる。</p></div></div>
+          <div class="check spring" data-anim="4"><div class="ci">◯</div><div><b>顔は記号化</b><p>点の目・小さな口。崩れない。</p></div></div>
+          <div class="check spring" data-anim="5"><div class="ci">◯</div><div><b>色は2〜3色</b><p>遠目でも“その子”と分かる。</p></div></div>
+          <div class="check spring" data-anim="5"><div class="ci">◯</div><div><b>丸みと、設定</b><p>親しみ＋物語が、愛着を生む。</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：サンリオキャラクター ©2024 SANRIO CO., LTD.（教育目的の引用）</span></div>
   </section>
 
   <!-- イルミナを分析する -->
@@ -837,42 +799,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>03 — Workshop</span></div>
   </section>
 
-  <!-- 30 組み立て実演 -->
-  <section class="slide" data-sec="Workshop">
-    <div class="top"><p class="eyebrow" data-anim="1">Trace &amp; Clean Up</p>
-    <h1 class="h1" data-anim="2">ラフをなぞって、<span class="k3">清書</span>する。</h1></div>
-    <div class="build" style="margin-top:6px">
-      <div style="display:flex;align-items:center;justify-content:center;height:340px" data-anim="2">
-        <div class="kv-frame filled viz" style="width:300px;height:320px"><img src="assets/rough.png" alt="ルミィのラフを下絵にトレース"><div class="scan"></div></div>
-      </div>
-      <div>
-        <div class="bsteps">
-          <div class="bstep step" data-step="1"><span class="bi">①</span> ラフを下絵に敷く（薄く表示）</div>
-          <div class="bstep step" data-step="2"><span class="bi">②</span> 体の輪郭を、図形＋ペンでなぞる</div>
-          <div class="bstep step" data-step="3"><span class="bi">③</span> スパークを三角でなぞる</div>
-          <div class="bstep step" data-step="4"><span class="bi">④</span> 目と口をなぞって置く</div>
-          <div class="bstep step" data-step="5"><span class="bi">⑤</span> 色とほっぺで“性格”を宿す</div>
-        </div>
-        <p class="cap" style="margin-top:14px">→キーで、ラフの上に清書が1つずつ重なります。</p>
-      </div>
-    </div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>03 — Workshop</span></div>
-  </section>
-
-  <!-- 31 仕上げ -->
-  <section class="slide" data-sec="Workshop">
-    <div class="top"><p class="eyebrow" data-anim="1">The Final Touches</p>
-    <h1 class="h1" data-anim="2">色・表情・名前で、命を吹き込む。</h1></div>
-    <div class="cards3" style="margin-top:8px">
-      <div class="card-b" data-anim="3"><div class="num">01</div><h3>配色</h3><p>色は2〜3色に絞る。イルミナ＝光なら暖色＋差し色が◎。</p></div>
-      <div class="card-b" data-anim="4"><div class="num">02</div><h3>表情</h3><p>目と口の位置を少し動かすだけで、性格が変わる。</p></div>
-      <div class="card-b" data-anim="5"><div class="num">03</div><h3>名前</h3><p>名前と設定を付けた瞬間、それは“キャラクター”になる。</p></div>
-    </div>
-    <div class="tip" data-anim="6"><b>思い出して</b> 今日の「視線誘導」と「引き算」。迷ったら、足すより減らす。</div>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>03 — Workshop</span></div>
-  </section>
-
-  <!-- 32 おさらい -->
+  <!-- おさらい -->
   <section class="slide" data-sec="Wrap up">
     <div class="top"><p class="eyebrow" data-anim="1">Three Things to Keep</p>
     <h1 class="h1" data-anim="2">今日、持ち帰ってほしい3つ。</h1></div>
@@ -881,8 +808,15 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
       <div class="card-b" data-anim="4"><div class="num">02</div><h3>理由がある</h3><p>良いデザインには、必ず説明できる理由がある。</p></div>
       <div class="card-b" data-anim="5"><div class="num">03</div><h3>らしさを選ぶ</h3><p>伝わるより刺さる。整えるより残す。正解よりらしさ。</p></div>
     </div>
-    <p class="body" style="margin-top:20px;font-size:18px" data-anim="6">上手い下手より、まず<span class="k3">「なぜ？」を持つこと</span>。それがデザイナーの第一歩。</p>
-    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>Wrap up</span></div>
+    <div data-anim="6" style="margin-top:18px">
+      <div style="font-family:var(--en);font-weight:600;font-size:11px;letter-spacing:.12em;color:var(--ink-45);text-transform:uppercase;margin-bottom:10px">Today's Examples ・ 今日の題材で振り返り</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+        <div style="display:flex;gap:12px;align-items:center"><img src="assets/art-exit8.jpg" alt="8番出口" style="width:56px;height:76px;object-fit:cover;border-radius:6px;box-shadow:var(--sh-1)"><div><b style="font-size:14px">『8番出口』</b><p style="font-size:12px;color:var(--ink-45);margin-top:2px">デザイン＝意図と情報</p></div></div>
+        <div style="display:flex;gap:12px;align-items:center"><img src="assets/kv-1ki.jpg" alt="黄泉のツガイ" style="width:56px;height:76px;object-fit:cover;border-radius:6px;box-shadow:var(--sh-1)"><div><b style="font-size:14px">『黄泉のツガイ』</b><p style="font-size:12px;color:var(--ink-45);margin-top:2px">色が、物語を語る</p></div></div>
+        <div style="display:flex;gap:12px;align-items:center"><img src="assets/sanrio.jpg" alt="サンリオ" style="width:56px;height:76px;object-fit:cover;border-radius:6px;box-shadow:var(--sh-1)"><div><b style="font-size:14px">サンリオ</b><p style="font-size:12px;color:var(--ink-45);margin-top:2px">引き算と、らしさ</p></div></div>
+      </div>
+    </div>
+    <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：8番出口/黄泉のツガイ/サンリオ 各©権利者（教育目的の引用）</span></div>
   </section>
 
   <!-- 33 Thank you -->
