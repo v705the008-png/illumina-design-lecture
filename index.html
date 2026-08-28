@@ -130,10 +130,10 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .hint{position:fixed;left:50%;transform:translateX(-50%);bottom:8px;z-index:50;color:#6a6b80;font-family:var(--en);font-size:11px;letter-spacing:.05em}
 
 /* ---------- dark / section (=フルブリードのブルーパネル) ---------- */
-.slide.dark{background:var(--blue);color:var(--ink)}
+.slide.dark{background:linear-gradient(180deg,#eef1ff 0%,#faf9f6 62%);color:var(--ink)}
 .slide.dark .body{color:rgba(17,18,25,.74)}
-.slide.dark .eyebrow{color:var(--ink)}
-.dots{background-image:radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.4px);background-size:22px 22px}
+.slide.dark .eyebrow{color:var(--blue)}
+.dots{background-image:radial-gradient(rgba(59,63,245,.10) 1.4px,transparent 1.4px);background-size:22px 22px}
 .ghost-num{position:absolute;right:-6px;bottom:-42px;font-family:var(--en);font-weight:800;font-size:230px;line-height:.8;color:var(--mint);letter-spacing:-.04em;z-index:1}
 .section-center{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
 /* 常時アニメ：巨大数字のゆっくりドリフト（上品な"生きている感"） */
@@ -286,7 +286,7 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .bstep.shown{border-color:var(--line-blue);background:var(--tint)}
 
 /* closing / statement dark */
-.slide.stmt{background:var(--blue);color:var(--ink);justify-content:center}
+.slide.stmt{background:radial-gradient(120% 120% at 15% 0%,#eef1ff 0%,#f7f5f1 68%);color:var(--ink);justify-content:center}
 .slide.stmt .body{color:var(--ink-70)}
 .slide.stmt .eyebrow{color:var(--ink)}
 .slide.stmt .contact .lb{color:var(--ink-45)} .slide.stmt .contact .cv{color:var(--ink)}
@@ -335,8 +335,8 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div class="float-field">
       <span class="fshape" style="width:130px;height:130px;background:var(--mint);right:16%;top:32%;--fd:11s;opacity:.16"></span>
       <span class="fshape" style="width:64px;height:64px;background:var(--coral);right:31%;top:58%;--fd:8.5s;--fdl:.6s;opacity:.22"></span>
-      <span class="fshape ring" style="width:96px;height:96px;color:#fff;right:23%;top:16%;--fd:12s;opacity:.16"></span>
-      <span class="fshape" style="width:26px;height:26px;background:#fff;right:12%;top:64%;--fd:7s;--fdl:.3s;opacity:.3"></span>
+      <span class="fshape ring" style="width:96px;height:96px;color:var(--blue);right:23%;top:16%;--fd:12s;opacity:.18"></span>
+      <span class="fshape" style="width:26px;height:26px;background:var(--coral);right:12%;top:64%;--fd:7s;--fdl:.3s;opacity:.4"></span>
     </div>
     <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start">
       <div class="en-huge" style="font-size:118px;color:var(--ink)" data-anim="1">Design<br>Lecture</div>
@@ -359,7 +359,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     </div>
     <div class="float-field">
       <span class="fshape" style="width:110px;height:110px;background:var(--mint);left:52%;top:24%;--fd:11s;opacity:.14"></span>
-      <span class="fshape ring" style="width:84px;height:84px;color:#fff;left:70%;top:50%;--fd:9.5s;--fdl:.5s;opacity:.16"></span>
+      <span class="fshape ring" style="width:84px;height:84px;color:var(--blue);left:70%;top:50%;--fd:9.5s;--fdl:.5s;opacity:.16"></span>
       <span class="fshape" style="width:26px;height:26px;background:var(--coral);left:60%;top:66%;--fd:7.5s;opacity:.28"></span>
     </div>
     <div class="ghost-num">01</div>
@@ -465,7 +465,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     </div>
     <div class="float-field">
       <span class="fshape" style="width:120px;height:120px;background:var(--coral);left:50%;top:22%;--fd:12s;opacity:.14"></span>
-      <span class="fshape ring" style="width:78px;height:78px;color:#fff;left:68%;top:52%;--fd:9s;--fdl:.4s;opacity:.16"></span>
+      <span class="fshape ring" style="width:78px;height:78px;color:var(--blue);left:68%;top:52%;--fd:9s;--fdl:.4s;opacity:.16"></span>
       <span class="fshape" style="width:24px;height:24px;background:var(--mint);left:58%;top:66%;--fd:7s;opacity:.3"></span>
     </div>
     <div class="ghost-num">02</div>
@@ -609,7 +609,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     </div>
     <div class="float-field">
       <span class="fshape" style="width:114px;height:114px;background:var(--mint);left:52%;top:24%;--fd:11.5s;opacity:.14"></span>
-      <span class="fshape ring" style="width:82px;height:82px;color:#fff;left:69%;top:50%;--fd:9.5s;--fdl:.5s;opacity:.16"></span>
+      <span class="fshape ring" style="width:82px;height:82px;color:var(--blue);left:69%;top:50%;--fd:9.5s;--fdl:.5s;opacity:.16"></span>
       <span class="fshape" style="width:26px;height:26px;background:var(--coral);left:60%;top:66%;--fd:7.5s;opacity:.28"></span>
     </div>
     <div class="ghost-num">03</div>
@@ -803,17 +803,18 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
   <section class="slide" data-sec="Wrap up">
     <div class="top"><p class="eyebrow" data-anim="1">Three Things to Keep</p>
     <h1 class="h1" data-anim="2">今日、持ち帰ってほしい3つ。</h1></div>
-    <div class="cards3" style="margin-top:8px">
-      <div class="card-b" data-anim="3"><div class="num">01</div><h3>主語は相手</h3><p>デザインはアートじゃない。伝えるための設計。</p></div>
-      <div class="card-b" data-anim="4"><div class="num">02</div><h3>理由がある</h3><p>良いデザインには、必ず説明できる理由がある。</p></div>
-      <div class="card-b" data-anim="5"><div class="num">03</div><h3>らしさを選ぶ</h3><p>伝わるより刺さる。整えるより残す。正解よりらしさ。</p></div>
-    </div>
-    <div data-anim="6" style="margin-top:18px">
-      <div style="font-family:var(--en);font-weight:600;font-size:11px;letter-spacing:.12em;color:var(--ink-45);text-transform:uppercase;margin-bottom:10px">Today's Examples ・ 今日の題材で振り返り</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
-        <div style="display:flex;gap:12px;align-items:center"><img src="assets/art-exit8.jpg" alt="8番出口" style="width:56px;height:76px;object-fit:cover;border-radius:6px;box-shadow:var(--sh-1)"><div><b style="font-size:14px">『8番出口』</b><p style="font-size:12px;color:var(--ink-45);margin-top:2px">デザイン＝意図と情報</p></div></div>
-        <div style="display:flex;gap:12px;align-items:center"><img src="assets/kv-1ki.jpg" alt="黄泉のツガイ" style="width:56px;height:76px;object-fit:cover;border-radius:6px;box-shadow:var(--sh-1)"><div><b style="font-size:14px">『黄泉のツガイ』</b><p style="font-size:12px;color:var(--ink-45);margin-top:2px">色が、物語を語る</p></div></div>
-        <div style="display:flex;gap:12px;align-items:center"><img src="assets/sanrio.jpg" alt="サンリオ" style="width:56px;height:76px;object-fit:cover;border-radius:6px;box-shadow:var(--sh-1)"><div><b style="font-size:14px">サンリオ</b><p style="font-size:12px;color:var(--ink-45);margin-top:2px">引き算と、らしさ</p></div></div>
+    <div class="cards3" style="margin-top:10px">
+      <div class="card-b" data-anim="3" style="padding:0;overflow:hidden">
+        <div style="height:170px;overflow:hidden;background:#0e1020"><img src="assets/art-exit8.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block"></div>
+        <div style="padding:16px 22px 22px"><div class="num">01</div><h3>主語は相手</h3><p>デザインはアートじゃない。伝えるための設計。</p></div>
+      </div>
+      <div class="card-b" data-anim="4" style="padding:0;overflow:hidden">
+        <div style="height:170px;overflow:hidden;background:#0e1020"><img src="assets/kv-1ki.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 32%;display:block"></div>
+        <div style="padding:16px 22px 22px"><div class="num">02</div><h3>理由がある</h3><p>良いデザインには、必ず説明できる理由がある。</p></div>
+      </div>
+      <div class="card-b" data-anim="5" style="padding:0;overflow:hidden">
+        <div style="height:170px;overflow:hidden;background:#f4f2ec"><img src="assets/sanrio.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block"></div>
+        <div style="padding:16px 22px 22px"><div class="num">03</div><h3>らしさを選ぶ</h3><p>伝わるより刺さる。整えるより残す。正解よりらしさ。</p></div>
       </div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：8番出口/黄泉のツガイ/サンリオ 各©権利者（教育目的の引用）</span></div>
