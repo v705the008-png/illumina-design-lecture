@@ -196,6 +196,11 @@ h2.h2{font-family:var(--jp);font-weight:900;font-size:30px;line-height:1.2;font-
 .avlab span{font-family:var(--jp);font-size:14px;color:var(--ink-45);font-weight:500;margin-left:8px}
 .avdesc{font-size:14px;color:var(--ink-70);line-height:1.7;margin-top:8px;max-width:340px}
 .avmid{font-family:var(--en);font-weight:700;color:var(--ink-45);font-size:26px;padding:0 8px}
+/* クリックで描かれる小さなZ（構図の説明） */
+.zmini polyline{stroke-dasharray:230;stroke-dashoffset:230}
+.step.shown .zmini polyline{animation:zdraw .9s var(--e-out) .12s forwards}
+@keyframes zdraw{to{stroke-dashoffset:0}}
+.pt.zpt{align-items:center;margin-top:12px;padding-top:14px;border-top:1px solid var(--line)}
 .metarow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .mchip{font-size:14px;color:var(--ink-70);background:var(--card);border:1px solid var(--line);border-radius:0;padding:8px 16px;box-shadow:var(--sh-1)}
 .mchip b{color:var(--blue);font-family:var(--en);font-size:11px;letter-spacing:.05em;margin-right:8px;text-transform:uppercase}
@@ -461,7 +466,7 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
     <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center">
       <div class="serif-label" style="font-size:27px;color:var(--coral)" data-anim="1">Chapter II</div>
       <div class="en-huge" style="font-size:110px;color:var(--ink);margin-top:2px" data-anim="2">Lecture</div>
-      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「なぜ良い」へ</div>
+      <div style="margin-top:44px;font-weight:900;font-size:25px;color:var(--ink);font-family:var(--jp);letter-spacing:.02em" data-anim="3">デザインの見方 ─「なんとなく良い」を「だから良い」へ</div>
     </div>
     <div class="float-field">
       <span class="fshape" style="width:120px;height:120px;background:var(--coral);left:50%;top:22%;--fd:12s;opacity:.14"></span>
@@ -577,6 +582,12 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
           <div class="pt step" data-step="4"><span class="sw" style="background:var(--teal)"></span><div><b>補色の青緑（背景の魔物）</b><p>赤の<span class="em-t">反対の色</span>＝魔・死・夜。並ぶと互いが際立つ。</p></div></div>
         </div>
         <div class="storybar step" data-step="5"><span class="lead-em">POINT</span><div>だから、この物語は赤なんだ。<b>色は、ストーリーを語る。</b></div></div>
+        <div class="pt zpt step" data-step="6">
+          <div style="width:66px;height:54px;flex-shrink:0">
+            <svg class="zmini" viewBox="0 0 66 54" style="width:100%;height:100%"><polyline points="9,9 57,9 9,45 57,45" fill="none" stroke="var(--blue)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div><b>構図もＺ型</b><p>視線はZに流れ、中央の<span class="k2">双子</span>へ自然と届く。</p></div>
+        </div>
       </div>
     </div>
     <div class="foot"><span class="brand">Ued.Yusuke Design Studio</span><span>出典：『黄泉のツガイ』KV ©荒川弘／SQUARE ENIX・製作委員会（教育目的の引用）</span></div>
@@ -823,10 +834,16 @@ html.no-js .draw path,html.no-js .draw line,html.no-js .draw polyline{stroke-das
   <!-- 33 Thank you -->
   <section class="slide stmt" data-sec="Thank you">
     <div class="dots" style="position:absolute;inset:0;opacity:.5"></div>
+    <div class="float-field">
+      <span class="fshape" style="width:120px;height:120px;background:var(--coral);left:60%;top:16%;--fd:9s;opacity:.18"></span>
+      <span class="fshape ring" style="width:92px;height:92px;color:var(--blue);left:80%;top:30%;--fd:10s;--fdl:.5s;opacity:.4"></span>
+      <span class="fshape" style="width:26px;height:26px;background:var(--mint);left:66%;top:52%;--fd:7s;opacity:.55"></span>
+    </div>
+    <div style="position:absolute;right:-6px;bottom:-24px;font-family:var(--en);font-weight:800;font-size:150px;line-height:.8;color:var(--coral);letter-spacing:-.03em;z-index:0;user-select:none;animation:driftY 5.5s ease-in-out infinite alternate">END</div>
     <div class="section-center">
       <p class="eyebrow" data-anim="1">Thank You</p>
       <div class="display" style="margin-top:14px" data-anim="2">つくるって、たのしい。</div>
-      <p class="body" style="margin-top:18px;max-width:640px" data-anim="3">今日描いたルミィは、あなたが最初につくった“らしさ”の証拠です。<br>これからも、たくさんつくってください。</p>
+      <p class="body" style="margin-top:18px;max-width:640px" data-anim="3">今日をきっかけに、いろんなデザインに触れてみてください。<br>「なぜ良いか」を考えて、気になったら、どんどん<span class="k1">チャレンジ</span>を。</p>
       <div class="contact" data-anim="4">
         <div><div class="lb">Studio</div><div class="cv">Ued.Yusuke Design Studio</div></div>
         <div><div class="lb">Web</div><div class="cv">ued-yusuke.com</div></div>
